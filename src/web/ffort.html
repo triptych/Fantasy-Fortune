@@ -7,7 +7,7 @@
        Remove this if you use the .htaccess -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-  <title>ffant</title>
+  <title>Fantasy Fortune</title>
   <meta name="description" content="" />
   <meta name="generator" content="Studio 3 http://aptana.com/" />
   <meta name="author" content="Andrew Wooldridge" />
@@ -19,26 +19,18 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   
   <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.2.0/build/cssreset/reset-min.css" />
+  <link rel="stylesheet" type="text/css" href="css/ffort.css" />
+
 
   <script src="http://yui.yahooapis.com/3.2.0/build/yui/yui-min.js"></script>
-
-  
-  <style>
-    .fantasyfortune{
-      width: 250px;
-      height: 350px;
-      border: 1px solid black;
-      position: relative;
-      
-    }
-    
-  </style>
+  <script src="js/ffort.js"></script>
 </head>
 
 <body>
   <div class="fantasyfortune">
     <header>
       <h1>Fantasy Fortune</h1>
+      <button>Start</button>
     </header>
     <nav>
       <p><a href="/">Home</a></p>
@@ -46,7 +38,37 @@
     </nav>
 
     <div class="dashboard">
-      
+      <div class="panel character">
+        <h2>Your character</h2>
+        <ul>
+          <li>
+            <label>Name:</label>
+            <input type="text" class="chr_name"/>
+          </li>
+          <!--
+          <li>
+            <label>Color:</label>
+            [color picker]
+          </li>
+          -->
+          <li>
+              <label>Gender:</label>
+              <select class="chr_gender">
+                <option value="m">Male</option>
+                <option value="f">Female</option>
+              </select>
+          </li>
+          <li><label>Class:</label>
+              <select class="chr_class">
+                <option value="mage">Mage</option>
+                <option value="fighter">Fighter</option>
+                <option value="ranger">Ranger</option>
+                <option value="thief">Thief</option>
+              </select>
+          </li>
+        </ul>
+        <button class="ffort_save">Save</button><button class="ffort_clear">Clear</button>
+      </div>  
     </div>
 
     <footer>
