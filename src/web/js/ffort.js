@@ -49,6 +49,19 @@ YUI().use("node", "gallery-storage-lite", function(Y){
       
       
     },
+    clearCharData: function(){
+      ffort.charData.name = "";
+      ffort.charData.gender = "";
+      ffort.charData.chr_class = "";
+      
+      //now save it:
+      Y.StorageLite.on('storage-lite:ready', function () {
+       Y.log("storage lite ready -- saving data"); 
+       Y.StorageLite.setItem("character", Y.JSON.stringify(ffort.charData));
+      });
+      
+      Y.Node.getDOMNode(Y.one(".chr_form")).reset();
+    },
     
     bindings: function(){
       Y.log("bindings called");
@@ -63,6 +76,7 @@ YUI().use("node", "gallery-storage-lite", function(Y){
       Y.all(".ffort_clear").on("click",function(e){
         e.preventDefault();
         Y.log("clear clicked");
+        ffort.clearCharData();
       })
 
     }
