@@ -1,61 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fantasy Fortune App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="title-container">
+    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 100 100" class="sword-icon">
+      <g fill="none" stroke="#fff" stroke-width="2">
+        <path d="M10,90 L50,10 L90,90 Z" />
+        <path d="M50,10 L50,90" />
+        <path d="M30,70 L70,70" />
+        <path d="M40,50 L60,50" />
+        <circle cx="50" cy="30" r="10" />
+      </g>
+    </svg>
+    <h1>Fantasy Fortune</h1>
+  </div>
 
-        <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
-        Remove this if you use the .htaccess -->
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <main>
+    <section class="fortune-generator">
+      <button id="fortune-button">Generate Fortune</button>
+      <div id="countdown-timer"></div>
+    </section>
 
-        <title>Fantasy Fortune v0.1</title>
-        <meta name="description" content="" />
-        <meta name="generator" content="Studio 3 http://aptana.com/" />
-        <meta name="author" content="Andrew Wooldridge" />
+    <section class="fortune-display">
+      <h2>Your Fortune</h2>
+      <p id="fortune-message"></p>
+    </section>
 
-        <meta name="viewport" content="width=device-width; initial-scale=1.0" />
+    <section class="fortune-history">
+      <h2>Previous Fortunes</h2>
+      <ul id="fortune-list"></ul>
+    </section>
+  </main>
 
-        <!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
-        <link rel="shortcut icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.2.0/build/cssreset/reset-min.css" />
-        <link rel="stylesheet" type="text/css" href="css/ffort.css" />
+  <footer>
+    <p>&copy; 2024 Andrew Wooldridge. All rights reserved.</p>
+    <p>Visits: <span id="hit-count"></span></p>
+  </footer>
 
-        
-        <script src="http://yui.yahooapis.com/3.2.0/build/yui/yui-min.js"></script>
-        <script src="js/ffort.js"></script>
-        
-    </head>
-    <body>
-        <div id="fantfort">
-            <div class="dash">
-                <div class="views">
-                    <div class="home panel">
-                        <h1>Fantasy Fortune</h1>
-                        <button>Start</button>
-                    </div>
-                    <div class="about panel hidden">
-                        <h1>About</h1>
-                    </div>
-                    <div class="character panel hidden">
-                        <h1>Character</h1>
-                    </div>
-                    <div class="fortune panel hidden">
-                        <h1>Fortune!</h1>
-                    </div>
-                </div>
-                <div class="toolbar">
-                  <ul>
-                    <li id="home_link">Home</li>
-                    <li id="about_link">About</li>
-                    <li id="character_link">Character</li>
-                    <li id="fortune_link">Fortune!</li>
-                    
-                  </ul> 
-                </div>
-                <footer>
-                    <span class="ver">v 0.1</span>
-                </footer>
-            </div>
-        </div>
-    </body>
+  <script src="script.js"></script>
+</body>
 </html>

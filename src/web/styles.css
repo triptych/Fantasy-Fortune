@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap');
+
+body {
+  font-family: 'Cinzel Decorative', cursive;
+  background: linear-gradient(45deg, #4b0082, #8b0000, #4b0082);
+  background-size: 200% 200%;
+  animation: gradientAnimation 10s ease infinite;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 36px;
+  margin: 0;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.fortune-generator {
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+}
+#fortune-button {
+  font-family: 'Cinzel Decorative', cursive;
+  font-size: 24px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  animation: floating 3s infinite, colorTransition 10s linear infinite;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+#fortune-button:hover {
+  background-color: #555;
+}
+
+#fortune-button:active {
+  background-color: #222;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  transform: translateY(2px);
+}
+
+@keyframes floating {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(10px, 10px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes colorTransition {
+  0% { color: #ff0000; }
+  7.69% { color: #ff7f00; }
+  15.38% { color: #ffff00; }
+  23.08% { color: #7fff00; }
+  30.77% { color: #00ff00; }
+  38.46% { color: #00ff7f; }
+  46.15% { color: #00ffff; }
+  53.85% { color: #007fff; }
+  61.54% { color: #0000ff; }
+  69.23% { color: #7f00ff; }
+  76.92% { color: #ff00ff; }
+  84.62% { color: #ff007f; }
+  92.31% { color: #ff0000; }
+  100% { color: #ff0000; }
+}
+
+#countdown-timer {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.fortune-display {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  #fortune-message {
+    font-size: 24px;
+    margin: 0;
+    display: inline-block;
+    padding: 20px;
+    background-color: #f5f5dc;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  #fortune-message::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background-color: #f5f5dc;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  #fortune-message::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background-color: #f5f5dc;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+.fortune-history {
+  text-align: center;
+}
+
+#fortune-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+#fortune-list li {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+}
+
+.title-container {
+  text-align: center;
+}
+
+.sword-icon {
+  margin-right: 10px;
+  transform-style: preserve-3d;
+  animation: rotateAnimation 5s linear infinite;
+}
+
+
+@keyframes rotateAnimation {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
