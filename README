@@ -1,2 +1,52 @@
-This is a web application which merges the idea of a daily "fortune" with the concept of an RPG.
-It uses several different web technologies such as canvas, html5, localstorage, and more.
+Fantasy Fortune App Project Documentation
+
+1. Project Overview:
+   The Fantasy Fortune App is a web-based application that generates random fantasy-themed fortunes for users. It allows users to click a button to receive a fortune, displays the generated fortune, and keeps track of the user's previously received fortunes. The app also includes a countdown timer to limit the fortune generation to once per day.
+
+2. Project Structure:
+   The project consists of the following files:
+   - index.html: The main HTML file that defines the structure of the app.
+   - styles.css: The CSS file that contains the styles for the app.
+   - script.js: The JavaScript file that handles the app's functionality.
+   - fortunes.json: The JSON file that stores the collection of fortunes.
+
+3. HTML Structure (index.html):
+   - The <header> section contains the app's title and a decorative sword SVG.
+   - The <main> section is divided into three parts:
+     - Fortune Generator: Includes a button to generate fortunes and a countdown timer.
+     - Fortune Display: Displays the generated fortune message.
+     - Fortune History: Shows a list of the user's previously received fortunes.
+   - The <footer> section contains the app's copyright information and a hit counter.
+
+4. CSS Styles (styles.css):
+   - The app uses the 'Cinzel Decorative' font from Google Fonts for a fantasy-themed look.
+   - The background has a linear gradient that cycles between dark purple and dark red.
+   - The "Generate Fortune" button has a dark appearance with a slight shadow and hover/active states.
+   - The generated fortune message is styled to resemble a strip of old paper.
+   - The sword SVG rotates slowly along the x-axis in 3D, centered on the SVG.
+
+5. JavaScript Functionality (script.js):
+   - The script fetches the fortunes from the fortunes.json file.
+   - It handles the generation of random fortunes, ensuring no duplicate fortunes are displayed.
+   - The generated fortunes are stored in the user's browser storage to keep track of previously received fortunes.
+   - The countdown timer limits the fortune generation to once per day.
+   - The hit counter tracks the number of views and saves the count in localStorage.
+
+6. Fortune Data (fortunes.json):
+   - The fortunes.json file contains an array of fortune objects.
+   - Each fortune object has an "id" property for unique identification and a "message" property containing the fortune text.
+   - The file currently includes 50 fantasy-themed fortunes.
+
+7. Usage:
+   - Upon loading the app, users can click the "Generate Fortune" button to receive a random fortune.
+   - The generated fortune is displayed in the "Your Fortune" section.
+   - Previously received fortunes are listed in the "Previous Fortunes" section.
+   - The countdown timer prevents users from generating a new fortune until 24 hours have passed since the last fortune generation.
+   - The hit counter in the footer tracks the number of views of the app.
+
+8. Customization:
+   - The app's appearance can be customized by modifying the styles in the styles.css file.
+   - Additional fortunes can be added to the fortunes.json file to expand the pool of available fortunes.
+   - The JavaScript code in the script.js file can be extended to add more features or modify existing functionality.
+
+This project documentation provides an overview of the Fantasy Fortune App, its structure, and how it works. It should give the new session a comprehensive understanding of the project, enabling them to assist with any further development or modifications.
